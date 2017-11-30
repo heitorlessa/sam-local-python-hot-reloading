@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Example DynamoDB and Lambda 
+Resources:
+
+    UsersFunction:
+      Type: AWS::Serverless::Function
+      Properties:
+        CodeUri: ./users/dev/
+        Handler: users.lambda_handler
+        Runtime: python3.6
+        Environment:
+          Variables:
+            TABLE_NAME: "users"
+        Events:
+          CatchAll:
+            Type: Api
+            Properties:
+              Path: /{proxy+}
+              Method: any
+  
