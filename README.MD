@@ -1,3 +1,7 @@
+# Archived
+
+Today, we have better solutions like [AWS Toolkit extension](https://aws.amazon.com/visualstudiocode/) that provides both debugging, build, and local invoke. 
+
 ## Requirements
 
 * Software
@@ -37,7 +41,3 @@ sam local start-api --docker-network sam-demo
 ```bash
 curl localhost:3000/getUsers
 ```
-
-Get hands-on with local development with hot-reloading experience for Python && Profit!
-
-> README will be properly be updated soon
